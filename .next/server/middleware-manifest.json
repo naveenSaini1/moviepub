@@ -1,0 +1,52 @@
+{
+  "version": 3,
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge-runtime-webpack.js",
+        "server/src/middleware.js"
+      ],
+      "name": "src/middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(\\/?index|\\/?index\\.json))?[\\/#\\?]?$",
+          "originalSource": "/"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/collections(\\.json)?[\\/#\\?]?$",
+          "originalSource": "/collections"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/genres(\\.json)?[\\/#\\?]?$",
+          "originalSource": "/genres"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/languages(\\.json)?[\\/#\\?]?$",
+          "originalSource": "/languages"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/years(\\.json)?[\\/#\\?]?$",
+          "originalSource": "/years"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/search(\\.json)?[\\/#\\?]?$",
+          "originalSource": "/search"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "xkcvz45CNdLs5di_QKZWv",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "aGi5ORTNeE8Whjr37BI95gR9HHzetMut2HIHOuC1caQ=",
+        "__NEXT_PREVIEW_MODE_ID": "708f49fef6390f34bcc4c1a591871191",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "c6a956c05a9a3b112f40ac262780af18d027c12f307856626e54b8757eb04ad7",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "a36c8a9143e7ba04295067ef0be50eedc908b2961732832d7bd38414b8853396"
+      }
+    }
+  },
+  "functions": {},
+  "sortedMiddleware": [
+    "/"
+  ]
+}
