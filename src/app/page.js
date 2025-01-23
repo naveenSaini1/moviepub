@@ -1,11 +1,14 @@
+import MainPage from "@/components/MainPage";
 
 
 
-export default function Home() {
+export default async function Home({params,searchParams}) {
+  searchParams = await searchParams;
+  console.log(searchParams);
   return (
     <div className="">
-      
     
+     <MainPage  searchParams={searchParams}/>
     </div>
   );
 }

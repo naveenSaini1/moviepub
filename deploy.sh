@@ -3,15 +3,14 @@
  npm install
 
 # Build the Node.js application
-#  npm run build
+ npm run build
 
 # Delete all running pm2 processes
- pm2 delete all
+sudo pm2 delete all
 
 # Start the Node.js application with pm2 and name it "moviepub"
-#  pm2 start npm --name "moviepub" -- start
+sudo pm2 start npm --name "moviepub" -- start
 
-pm2 start "node .next/standalone/server.js" --name "moviepub"
 
 
 # Find the process ID (PID) using port 8081

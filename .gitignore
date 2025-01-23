@@ -15,8 +15,9 @@
 
 # next.js
 # Ignore all of .next except standalone
-.next/*
-!.next/standalone
+#.next/*
+#!.next/standalone
+.next
 nohup.out
 
 # production

@@ -6,6 +6,7 @@ import MoviesContextApi from '@/contextApi/MoviesContextApi';
 import { endpoints, IMAGE_URL } from '@/constants/UrlConstants';
 import Link from 'next/link';
 import fetchApi from '@/utils/FetchApi';
+import { MOVIE } from '@/constants/baseConstants';
 
 
 export default function BannerSlider() {
@@ -58,13 +59,14 @@ export default function BannerSlider() {
                 height: '400px',
                 backgroundImage: `url(${movie.imageurl ? `${IMAGE_URL}/${movie.imageurl}` : `/placeholder.svg?height=1080&width=1920&text=${movie.title}`})`
               }}
-            ></div>
+            >
+            </div>
             <div className="absolute inset-0 flex justify-center items-center text-center p-4">
               <div className="flex flex-col">
                 <h2 className="text-4xl font-bold mb-2">{movie.title}</h2>
                 <p className="text-xl mb-4">{movie.year} • {movie.genre}</p>
 
-                <Link href={movie.slug} className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                <Link href={MOVIE+"/"+movie.slug} className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-colors">
                   Download Now
 
                 </Link>

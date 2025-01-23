@@ -1,5 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /movie/admin/
-
-Sitemap: https://moviepub.xyz/sitemap.xml

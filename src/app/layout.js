@@ -7,6 +7,7 @@ import Footer from "@/components/MovieComponents/Footer";
 import AlertSection from "@/components/MovieComponents/AlertSection";
 import Sidebar from "@/components/MovieComponents/Sidebar";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import SEOTags from "@/components/SEOTags";
 
 
 export const metadata = {
@@ -34,8 +35,10 @@ export default function RootLayout({ children }) {
           {children}
         </div>
       </div>
-      <Footer />
+     
     </main>
+    <SEOTags/>
+    <Footer />
       </body>
       <GoogleAnalytics />
     </html>
