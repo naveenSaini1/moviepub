@@ -1,15 +1,15 @@
-sudo git pull origin master
+ git pull origin master
 # Install Node.js packages
-sudo npm install
+ npm install
 
 # Build the Node.js application
-sudo npm run build
+ npm run build
 
 # Delete all running pm2 processes
-sudo pm2 delete all
+ pm2 delete all
 
 # Start the Node.js application with pm2 and name it "moviepub"
-sudo pm2 start npm --name "moviepub" -- start
+ pm2 start npm --name "moviepub" -- start
 
 
 
