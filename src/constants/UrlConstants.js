@@ -1,5 +1,7 @@
 // All the url constants are defined here
+// export const HOST_ADDRESS = 'http://localhost:8080';
 export const HOST_ADDRESS = 'https://app.moviepub.xyz';
+
 export const API_URL = `${HOST_ADDRESS}/api`;
 export const PUBLIC_API_URL = `${HOST_ADDRESS}/api/public`;
 export const IMAGE_URL = `${HOST_ADDRESS}/static`;
