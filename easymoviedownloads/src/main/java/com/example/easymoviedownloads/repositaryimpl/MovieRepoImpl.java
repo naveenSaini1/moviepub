@@ -99,6 +99,12 @@ public class MovieRepoImpl implements MovieRepo{
 	public List<SingleMovieDto> getAllTheMovies() {
 		return jdbcTemplate.query(sqlConstants.GET_THE_ALL_MOVIES,new MovieRowMapper.GetAllTheMovies());
 	}
+
+	@Override
+	public void increaseTheMovieDownloadCount(String url) {
+		jdbcTemplate.update(sqlConstants.UPDATE_THE_MOVIE_DOWNLOAD_COUNT,url);
+		
+	}
 	
 	
 	

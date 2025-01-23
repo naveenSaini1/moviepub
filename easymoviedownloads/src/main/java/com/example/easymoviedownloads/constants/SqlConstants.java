@@ -131,6 +131,8 @@ public class SqlConstants {
 	public	String	GET_THE_SINGLE_MOVIES_BY_URL;
 	@Value("${GET_THE_ALL_MOVIES}")
 	public	String GET_THE_ALL_MOVIES;
+	@Value("${UPDATE_THE_MOVIE_DOWNLOAD_COUNT}")
+	public	String UPDATE_THE_MOVIE_DOWNLOAD_COUNT;
 	
 //	collection_movie
 	

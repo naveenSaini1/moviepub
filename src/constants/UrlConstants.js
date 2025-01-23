@@ -26,6 +26,7 @@ export const endpoints = {
         years: `${API_URL}/admin/years`,
         languages: `${API_URL}/admin/languages`,
         updateMovie: `${API_URL}/admin/updateMovie`,
+        getAllTheMessages:`${API_URL}/admin/getAllTheMessages`,
 
     },
     // Public
@@ -53,6 +54,7 @@ export const endpoints = {
         singleMovieByUrl:`${PUBLIC_API_URL}/singleMovieByUrl`,
         createAMovieRequest:`${PUBLIC_API_URL}/createAMovieRequest`,
         getAllTheMoviesSlug:`${PUBLIC_API_URL}/getAllTheMoviesSlug`,
+
         
     },
 }

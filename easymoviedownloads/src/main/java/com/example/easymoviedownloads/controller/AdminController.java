@@ -17,15 +17,18 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.example.easymoviedownloads.dto.MovieDto;
 import com.example.easymoviedownloads.dto.SuccesDto;
 import com.example.easymoviedownloads.model.Collections;
 import com.example.easymoviedownloads.model.Genre;
 import com.example.easymoviedownloads.model.Languages;
 import com.example.easymoviedownloads.model.Links;
+import com.example.easymoviedownloads.model.MovieRequest;
 import com.example.easymoviedownloads.model.Year;
 import com.example.easymoviedownloads.service.CollectionsService;
 import com.example.easymoviedownloads.service.GenresService;
 import com.example.easymoviedownloads.service.LanguagesService;
+import com.example.easymoviedownloads.service.MovieRequestService;
 import com.example.easymoviedownloads.service.MovieService;
 import com.example.easymoviedownloads.service.YearsService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -50,6 +53,9 @@ public class AdminController {
 	
 	@Autowired
 	private MovieService		movieService;
+	
+	@Autowired 
+	private MovieRequestService	movieRequestService;
 	@GetMapping("/myadmin")
 	public String getAdmin() {
 		return new String("admin");
@@ -206,4 +212,10 @@ public class AdminController {
 
 		}
 		
+		
+		// movie Request messages
+		@GetMapping("/getAllTheMessages/{page}")
+		public ResponseEntity<List<MovieRequest>> getAllTheMessages(@PathVariable("page") Integer page){
+			return new ResponseEntity<List<MovieRequest>>(movieRequestService.getAllTheMessages(page),HttpStatus.OK);
+		}
 }

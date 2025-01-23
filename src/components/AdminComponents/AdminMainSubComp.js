@@ -4,6 +4,7 @@ import { ArrowLeft } from 'lucide-react'
 import CreateMovie from './CreateMovieArea'
 import CreateGenreArea from './CreateGenreArea'
 import ManageMovies from './ManageMoviesArea'
+import Messages from "./Messages"
 
 export default function AdminMainSubComp() {
    const [activeSection, setActiveSection] = useState('createMovie')
@@ -41,6 +42,14 @@ export default function AdminMainSubComp() {
                 Manage Movies
               </button>
             </li>
+            <li>
+              <button
+                onClick={() => setActiveSection('message')}
+                className={`w-full text-left p-2 rounded-md ${activeSection === 'message' ? 'bg-blue-700' : 'hover:bg-blue-600'}`}
+              >
+                Movie Request
+              </button>
+            </li>
           </ul>
         </div>
   
@@ -74,6 +83,14 @@ export default function AdminMainSubComp() {
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Manage Movies</h2>
               {/* Your Manage Movies section content here */}
               <ManageMovies/>
+            </div>
+          )}
+
+          {activeSection === 'message' && (
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">All Messages</h2>
+              {/* Your Manage Movies section content here */}
+              <Messages/>
             </div>
           )}
         </div>

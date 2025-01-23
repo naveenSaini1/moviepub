@@ -28,6 +28,7 @@ public interface MovieRepo {
 	public Integer				getTheTotalNumberOfSearchedMovies(String query);
 	public SingleMovieDto		getTheSingleMovieDataByUrl(String url);
 	public List<SingleMovieDto>	getAllTheMovies();
+	public void					increaseTheMovieDownloadCount(String url);
 
 
 

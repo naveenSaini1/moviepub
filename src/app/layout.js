@@ -6,6 +6,7 @@ import NavigationBar from "@/components/MovieComponents/NavigationBar";
 import Footer from "@/components/MovieComponents/Footer";
 import AlertSection from "@/components/MovieComponents/AlertSection";
 import Sidebar from "@/components/MovieComponents/Sidebar";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 
 export const metadata = {
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
       <Footer />
     </main>
       </body>
+      <GoogleAnalytics />
     </html>
   );
 }

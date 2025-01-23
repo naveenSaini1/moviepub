@@ -493,6 +493,8 @@ public class MovieServiceImpl implements MovieService{
 		singleMovie.setYear(year);
 		singleMovie.setGenres(genres);
 		
+		// update the download count
+		movieRepo.increaseTheMovieDownloadCount(url);
 		
 		return singleMovie;
 	}
