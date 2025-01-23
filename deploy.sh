@@ -3,7 +3,7 @@
  npm install
 
 # Build the Node.js application
- npm run build
+#  npm run build
 
 # Delete all running pm2 processes
  pm2 delete all
