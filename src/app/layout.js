@@ -22,10 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-      <Ed/>
-
-      </head>
+      
       <body
         className="">
           <main className="min-h-screen bg-black text-white">
@@ -44,6 +41,7 @@ export default function RootLayout({ children }) {
     </main>
     <SEOTags/>
     <Footer />
+    <Ed/>
       </body>
       <GoogleAnalytics />
     </html>
