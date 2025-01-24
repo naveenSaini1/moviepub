@@ -18,23 +18,7 @@ export default function GoogleAnalytics() {
 
             </Script>
 
-            <>
-      {/* ShareUs Configuration */}
-      <Script>
-        {`
-          window.shareus_config = {
-            uid: "niOnO0LJkJX70DBqFxH3ZPLyHOL2",
-          };
-          window.include_domains = ["https://mega.nz/"];
-        `}
-      </Script>
-      <Script
-        data-cfasync="false"
-        type="module"
-        crossOrigin="true"
-        src="//api.shareus.io/script.js"
-      />
-    </>
+  
         </>
     )
 }

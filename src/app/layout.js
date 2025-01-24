@@ -8,6 +8,7 @@ import AlertSection from "@/components/MovieComponents/AlertSection";
 import Sidebar from "@/components/MovieComponents/Sidebar";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import SEOTags from "@/components/SEOTags";
+import Ed from "@/components/Ed";
 
 
 export const metadata = {
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
     </main>
     <SEOTags/>
     <Footer />
+    <Ed/>
       </body>
       <GoogleAnalytics />
     </html>
