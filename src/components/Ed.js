@@ -9,7 +9,7 @@ export default function Ed() {
           window.shareus_config = {
             uid: "niOnO0LJkJX70DBqFxH3ZPLyHOL2",
           };
-          window.exclude_domains = ["https://moviepub.xyz/"];
+          window.exclude_domains = ["https://mega.nz/"];
         `}
       </Script>
       <Script
