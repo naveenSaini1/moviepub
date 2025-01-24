@@ -18,13 +18,14 @@ export default function GoogleAnalytics() {
 
             </Script>
 
-   {/* ShareUs Configuration */}
-   <Script>
+            <>
+      {/* ShareUs Configuration */}
+      <Script>
         {`
           window.shareus_config = {
             uid: "niOnO0LJkJX70DBqFxH3ZPLyHOL2",
           };
-          window.exclude_domains = ["https://moviepub.xyz/"];
+          window.include_domains = ["https://mega.nz/"];
         `}
       </Script>
       <Script
@@ -33,6 +34,7 @@ export default function GoogleAnalytics() {
         crossOrigin="true"
         src="//api.shareus.io/script.js"
       />
+    </>
         </>
     )
 }
