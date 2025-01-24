@@ -19,7 +19,7 @@ public class EasymoviedownloadsApplication {
 	            @Override
 	            public void addCorsMappings(CorsRegistry registry) {
 	                registry.addMapping("/**")
-	                        .allowedOrigins("https://moviepub.xyz/","http://localhost:3000/") // Allows requests from any origin
+	                        .allowedOrigins("*") // Allows requests from any origin
 	                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
 	                        .allowedHeaders("*") 
 	                        .allowCredentials(false); // Set to true if cookies are needed

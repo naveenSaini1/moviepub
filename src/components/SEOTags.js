@@ -1,3 +1,4 @@
+import { GENRES } from "@/constants/baseConstants"
 import Link from "next/link"
 
 export default function SEOTags() {
@@ -38,7 +39,7 @@ export default function SEOTags() {
             {movieCategories.map((category, index) => (
               <Link
                 key={index}
-                href={`/category/${category.toLowerCase()}`}
+                href={`/${GENRES}/${category}`}
                 className="bg-zinc-800 hover:bg-orange-500 text-white px-3 py-1 rounded-full text-sm transition-colors"
               >
                 {category}
@@ -53,7 +54,7 @@ export default function SEOTags() {
             {popularKeywords.map((keyword, index) => (
               <Link
                 key={index}
-                href={`/search?q=${encodeURIComponent(keyword)}`}
+                href={`/${GENRES}/${keyword}`}
                 className="bg-zinc-800 hover:bg-orange-500 text-white px-3 py-1 rounded-full text-sm transition-colors"
               >
                 {keyword}
