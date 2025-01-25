@@ -1,5 +1,6 @@
 package com.example.easymoviedownloads.service;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
@@ -16,7 +17,7 @@ import com.example.easymoviedownloads.model.Links;
 public interface MovieService {
 	
 	public void insertMovie(String name,List<Links> links,String keywords,String downloadName,MultipartFile imageUrl,String smallDescription,
-			String duration,String releaseDate,String bigdescription,String cast,String[] collections,String[] languages,String[] years,String[] genres);
+			String duration,String releaseDate,String bigdescription,String cast,String[] collections,String[] languages,String[] years,String[] genres) throws UnsupportedEncodingException;
 	
 	public List<MovieUpdateDto> getAllTheMovieUpdateDto(Integer page);
 	public SingleMovieDto		getTheSingleMovieDtoById(Integer moiveId) throws Exception;

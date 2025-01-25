@@ -114,9 +114,13 @@ function CreateMovie() {
 
 
     await fetchApi(`${endpoints.admin.movies}`, "POST", token.current, null, formdata);
+
     setTitle('');
     setYear('');
     setDuration('');
+    setDownloadName('')
+    setSmallDescription('');
+    setKeyword('');
     setReleaseDate('');
     setSynopsis('');
     setCast('');
@@ -125,6 +129,8 @@ function CreateMovie() {
     setCollections([]);
     setImageFile(null);
     setEpisodes([]);
+    alert('Movie created successfully');
+    
 
 
   };

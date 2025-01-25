@@ -2,6 +2,9 @@ package com.example.easymoviedownloads.serviceimpl;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
@@ -73,7 +76,7 @@ public class MovieServiceImpl implements MovieService{
 
 	@Override
 	public void insertMovie(String name,List<Links> links,String keywords, String downloadName, MultipartFile imageUrl, String smallDescription,
-			String duration, String releaseDate, String bigdescription, String cast,String[] collections,String[] languages,String[] years,String[] genres) {
+			String duration, String releaseDate, String bigdescription, String cast,String[] collections,String[] languages,String[] years,String[] genres) throws UnsupportedEncodingException {
 		
 		String slug=SlugUtils.generateSlug(downloadName);
 		String imageName = fileUpload(imageUrl, slug);
@@ -82,7 +85,9 @@ public class MovieServiceImpl implements MovieService{
 		System.out.println(movieId+" movieId");
 		// first let's insert the collection
 		for(Links l:links) {
-			String url=restTemplate.getForObject(String.format(URL_SHORTNER_CONSTENT, l.getUrl()), String.class);
+		    String encodedLink = l.getUrl().replace("#", "%23");
+			String url=restTemplate.getForObject(String.format(URL_SHORTNER_CONSTENT,encodedLink ), String.class);
+//			System.out.println(url+" urllll "+encodedLink);
 			linkRepo.insertLink(movieId, l.getName(), url);
 		}
 		for(String s:collections) {

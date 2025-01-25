@@ -1,5 +1,6 @@
 package com.example.easymoviedownloads.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 
@@ -172,7 +173,7 @@ public class AdminController {
 				, @RequestParam("releaseDate")String releaseDate,@RequestParam("bigDescription") String bigDescription,
 				@RequestParam("casts") String casts,@RequestParam("collectionNames")String[] collectionNames,
 				@RequestParam("genreNames")String[] genreNames,@RequestParam("languageNames")String[] languageNames,
-				@RequestParam("year")String[] year, @RequestParam("episodes")String episodesJson )
+				@RequestParam("year")String[] year, @RequestParam("episodes")String episodesJson ) throws UnsupportedEncodingException
 		{
 			System.out.println(episodesJson);
 			ObjectMapper objectMapper = new ObjectMapper();
