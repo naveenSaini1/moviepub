@@ -12,13 +12,13 @@ import { MOVIE } from '@/constants/baseConstants';
 export default function BannerSlider() {
 
   const [bannerMovies, setBannerMovies] = useState([]);
-  const lenghtRef=useRef();
+  const lenghtRef = useRef();
   useEffect(() => {
     // banner movies
     fetchApi(`${endpoints.public.bannerMovies}`, 'GET')
       .then((data) => {
         setBannerMovies(data);
-        lenghtRef.current=data.length;
+        lenghtRef.current = data.length;
       })
 
 
@@ -29,7 +29,7 @@ export default function BannerSlider() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log(bannerMovies.length + " lenght useEffect",lenghtRef.current)
+      console.log(bannerMovies.length + " lenght useEffect", lenghtRef.current)
       setCurrentIndex((prevIndex) => (prevIndex + 1) % lenghtRef.current)
     }, 5000)
 
@@ -52,21 +52,32 @@ export default function BannerSlider() {
       >
         {bannerMovies.map((movie) => (
           <div key={movie.title} className="min-w-full h-full relative">
-            <div
+            {/* <div
               className=" bg-cover bg-no-repeat bg-center brightness-50"
               style={{
                 width: '100%',
                 height: '400px',
                 backgroundImage: `url(${movie.imageurl ? `${IMAGE_URL}/${movie.imageurl}` : `/placeholder.svg?height=1080&width=1920&text=${movie.title}`})`
               }}
-            >
+            > */}
+
+            <div className="w-full relative aspect-video">
+              <Image
+                src={movie.imageurl ? `${IMAGE_URL}/${movie.imageurl}` : `/placeholder.svg?height=1080&width=1920&text=${movie.title}`}
+                alt={movie.title || 'Movie Banner'}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority
+              />
             </div>
-            <div className="absolute inset-0 flex justify-center items-center text-center p-4">
+            {/* </div> */}
+            <div className="absolute inset-0 flex justify-center i text-center p-4 ">
               <div className="flex flex-col">
                 <h2 className="text-4xl font-bold mb-2">{movie.title}</h2>
                 <p className="text-xl mb-4">{movie.year} • {movie.genre}</p>
 
-                <Link href={MOVIE+"/"+movie.slug} className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                <Link href={MOVIE + "/" + movie.slug} className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-colors">
                   Download Now
 
                 </Link>
