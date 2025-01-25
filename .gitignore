@@ -19,6 +19,7 @@
 #!.next/standalone
 .next
 nohup.out
+static/*
 
 # production
 /build

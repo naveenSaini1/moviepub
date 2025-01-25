@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.example.easymoviedownloads.constants.DefaultConstants;
@@ -41,8 +42,12 @@ import com.example.easymoviedownloads.utitly.SlugUtils;
 @Service
 public class MovieServiceImpl implements MovieService{
 	
+	private	String URL_SHORTNER_CONSTENT="https://api.shareus.io/easy_api?key=niOnO0LJkJX70DBqFxH3ZPLyHOL2&link=%s";
+	
 	@Value("${file.upload-dir}")
     private String uploadDir;
+	@Autowired
+	private RestTemplate restTemplate;
 	
 	@Autowired
 	private MovieRepo	movieRepo;
@@ -77,7 +82,8 @@ public class MovieServiceImpl implements MovieService{
 		System.out.println(movieId+" movieId");
 		// first let's insert the collection
 		for(Links l:links) {
-			linkRepo.insertLink(movieId, l.getName(), l.getUrl());
+			String url=restTemplate.getForObject(String.format(URL_SHORTNER_CONSTENT, l.getUrl()), String.class);
+			linkRepo.insertLink(movieId, l.getName(), url);
 		}
 		for(String s:collections) {
 			System.out.println(s+" ssss ");

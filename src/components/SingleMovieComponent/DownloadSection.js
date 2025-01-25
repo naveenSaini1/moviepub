@@ -32,6 +32,7 @@ export function DownloadSection({links=[]}) {
           <Link
             key={option.name}
             href={option.url}
+            target="_blank"
             className="flex items-center justify-between bg-gray-800/50 hover:bg-orange-900/20 transition-colors rounded-lg p-4 group"
           >
             <span className="flex items-center gap-2">
