@@ -49,7 +49,7 @@ export default function Movies({data}) {
           <span>•</span>
           {/* Colorful genre tags - fully visible and professional */}
           <div className="flex flex-wrap gap-1">
-            {movie.genre.split(',').map((genre, index) => (
+            {movie.genre.split(',').slice(0, 2).map((genre, index) => (
               <span 
                 key={index}
                 className={`px-1.5 py-0.5 rounded ${
@@ -61,11 +61,11 @@ export default function Movies({data}) {
                 {genre.trim()}
               </span>
             ))}
-            {/* {movie.genre.split(',').length > 2 && (
+            {movie.genre.split(',').length > 2 && (
               <span className="bg-zinc-800/50 text-zinc-400 px-1.5 py-0.5 rounded">
                 +{movie.genre.split(',').length - 2}
               </span>
-            )} */}
+            )}
           </div>
         </div>
       </div>
