@@ -38,19 +38,19 @@ export default function NavigationBar() {
   return (
     <nav className="bg-zinc-900 p-4 flex flex-wrap gap-4 justify-center items-center">
 
-      <Link href={COLLECTIONS + "/bollywood"} className="hover:text-orange-500 transition-colors  bg-orange-300 pl-1 pr-1 rounded-lg text-black font-bold">
+      <Link href={COLLECTIONS + "/Bollywood"} className="hover:text-orange-500 transition-colors  bg-orange-300 pl-1 pr-1 rounded-lg text-black font-bold">
         BollyWood
       </Link>
-      <Link href={COLLECTIONS + "/hollywood"} className="hover:text-orange-500 transition-colors  bg-orange-300 pl-1 pr-1 rounded-lg text-black font-bold">
+      <Link href={COLLECTIONS + "/Hollywood"} className="hover:text-orange-500 transition-colors  bg-orange-300 pl-1 pr-1 rounded-lg text-black font-bold">
         HollyWood
       </Link>
-      <Link href={LANGUAGES + "/dubbed"} className="hover:text-orange-500 transition-colors  bg-orange-300 pl-1 pr-1 rounded-lg text-black font-bold">
+      <Link href={LANGUAGES + "/Dubbed"} className="hover:text-orange-500 transition-colors  bg-orange-300 pl-1 pr-1 rounded-lg text-black font-bold">
         Hindi Dubbed
       </Link>
-      <Link href={COLLECTIONS + "/south"} className="hover:text-orange-500 transition-colors  bg-orange-300 pl-1 pr-1 rounded-lg text-black font-bold">
+      <Link href={COLLECTIONS + "/South Indian"} className="hover:text-orange-500 transition-colors  bg-orange-300 pl-1 pr-1 rounded-lg text-black font-bold">
         South Hindi Dubs
       </Link>
-      <Link href={COLLECTIONS + "/series"} className="hover:text-orange-500 transition-colors  bg-orange-300 pl-1 pr-1 rounded-lg text-black font-bold">
+      <Link href={COLLECTIONS + "/Web Series"} className="hover:text-orange-500 transition-colors  bg-orange-300 pl-1 pr-1 rounded-lg text-black font-bold">
         Web Series
       </Link>
       <Link href={COLLECTIONS + "/18"} className="hover:text-orange-500 transition-colors  bg-orange-300 pl-1 pr-1 rounded-lg text-black font-bold">

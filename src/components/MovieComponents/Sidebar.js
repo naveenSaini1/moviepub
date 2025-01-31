@@ -38,19 +38,19 @@ export default function Sidebar() {
           </button>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Link href={COLLECTIONS+"/"+"latest"} className="bg-zinc-700 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-500 transition-colors">
+          <Link href={COLLECTIONS+"/"+"Latest"} className="bg-zinc-700 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-500 transition-colors">
             Latest
           </Link>
-          <Link href={COLLECTIONS+"/"+"popular"} className="bg-zinc-700 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-500 transition-colors">
+          <Link href={COLLECTIONS+"/"+"Popular"} className="bg-zinc-700 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-500 transition-colors">
             Popular
           </Link>
-          <Link href={GENRES+"/"+"action"} className="bg-zinc-700 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-500 transition-colors">
+          <Link href={GENRES+"/"+"Action"} className="bg-zinc-700 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-500 transition-colors">
             Action
           </Link>
-          <Link href={GENRES+"/"+"comedy"} className="bg-zinc-700 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-500 transition-colors">
+          <Link href={GENRES+"/"+"Comedy"} className="bg-zinc-700 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-500 transition-colors">
             Comedy
           </Link>
-          <Link href={GENRES+"/"+"drama"} className="bg-zinc-700 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-500 transition-colors">
+          <Link href={GENRES+"/"+"Drama"} className="bg-zinc-700 text-white px-3 py-1 rounded-full text-sm hover:bg-orange-500 transition-colors">
             Drama
           </Link>
         </div>

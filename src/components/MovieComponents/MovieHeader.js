@@ -21,7 +21,7 @@ export default function MovieHeader() {
           Join Our Group !
         </Link>
         <Link href={MOVIE_REQEUST} className="hover:text-orange-500 transition-colors bg-orange-300 pl-1 pr-1 rounded-lg text-black font-bold">
-          Movie Request Page
+          Any Questions ?
         </Link>
       </nav>
     </header>

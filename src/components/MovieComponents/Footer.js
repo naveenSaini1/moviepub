@@ -9,7 +9,7 @@ export default function Footer() {
         <Link href={DISCLAIMER} className="text-blue-400 hover:underline mr-4">Disclaimer</Link>
         <Link href="/" className="text-blue-400 hover:underline mr-4">Join Our Group !</Link>
         <Link href="/" className="text-blue-400 hover:underline mr-4">How To Download ?</Link>
-        <Link href={MOVIE_REQEUST} className="text-blue-400 hover:underline">Movie Request Page</Link>
+        <Link href={MOVIE_REQEUST} className="text-blue-400 hover:underline">Any Questions ?</Link>
       </div>
     </footer>
   )

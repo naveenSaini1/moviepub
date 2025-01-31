@@ -6,9 +6,11 @@ import fetchApi from "@/utils/FetchApi";
 import { endpoints } from "@/constants/UrlConstants";
 import Pagination from "./pagination/Pagination";
 import { notFound } from "next/navigation";
+import LoadingPage from "./LoadingPage";
 
 export default function CategoreisComp({page,pageName,moviesLink,countLink}){
     const [totalPages, setTotalPages] = useState(0);
+    const [loading,setLoading]=useState(false);
     const [collectionMovies,setCollectionMovies]=useState([]);
 
      useEffect(()=>{
@@ -23,9 +25,11 @@ export default function CategoreisComp({page,pageName,moviesLink,countLink}){
       }
 
       if(totalPages==0 && pageName){
+        setLoading(true);
         fetchApi(`${countLink}/${pageName}`, 'GET')
         .then((data)=>{
           console.log(data);
+          setLoading(false);
           setTotalPages(data);
         })
   
@@ -43,8 +47,10 @@ export default function CategoreisComp({page,pageName,moviesLink,countLink}){
 
     return(
         <>
+        {collectionMovies.length==0 && <h1 className="text-center text-3xl text-white">No Movies Found</h1>}
+        {loading && <LoadingPage/>}
         
-            <Movies data={collectionMovies}/>
+         {collectionMovies.length!=0 &&   <Movies data={collectionMovies}/>}
             <Pagination totalPage={totalPages} page={(pageName?pageName:"bollywood")} currentPage={(page)?page:1} />
 
 

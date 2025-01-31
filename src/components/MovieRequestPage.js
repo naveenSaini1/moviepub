@@ -26,29 +26,30 @@ export default function MovieRequest() {
     <div className="min-h-screen w-[100%] bg-gray-900 text-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-orange-500 mb-2">Request a Movie</h1>
-          <p className="text-gray-300">Let us know what movie you'd like to see!</p>
+          <h1 className="text-3xl font-bold text-orange-500 mb-2">Any Questions</h1>
+          <p className="text-gray-300">Let us know what you'd like to see!</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6 bg-gray-800 p-6 rounded-lg shadow-lg">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-              Email <span className="text-orange-500">*</span>
+              Name <span className="text-orange-500">*</span>
             </label>
             <input
-              type="email"
-              id="email"
+              type="text"
+              id="text"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-orange-500"
-              placeholder="Your email address"
+              placeholder="Your Name address"
             />
           </div>
 
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-              Movie Request <span className="text-orange-500">*</span>
+              Movie Request | Question |
+              Error <span className="text-orange-500">*</span>
             </label>
             <textarea
               id="message"

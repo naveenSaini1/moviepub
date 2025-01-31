@@ -7,12 +7,13 @@ const MoviesContextApi=createContext();
 
 export const MoviesContextApiProvider=({children})=>{
     // get the banner movies
-  
+  const [loading,setLoading]=useState(false);
 
    
     return( 
-        <MoviesContextApi.Provider value={{}}>
-            {children}
+        <MoviesContextApi.Provider value={{setLoading}}>
+            {loading?<h1>Loading...</h1>:children}
+            
         </MoviesContextApi.Provider>
     )
 }
