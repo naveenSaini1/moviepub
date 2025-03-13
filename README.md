@@ -1,5 +1,110 @@
-# moviepub
+# MoviePub
 
+MoviePub is a web application designed to help users explore and download movies for Free. It provides an intuitive interface for browsing movies, viewing detailed information, and searching for specific films. and there is admin secton where the admin can upload moives and see the download counts and much like adding year languages and so on
+
+## Screenshots
+
+The Under belove following images illustrate the MoviePub application:
+
+1. **Homepage** - Displays a collection of featured movies with a visually appealing layout.
+2. **Movie Details Page** - Shows comprehensive details about a selected movie, including synopsis, cast, and more.
+3. **Search Results Page** - Presents movies that match the search criteria entered by the user.
+4. **Responsive UI** - Demonstrates how the app adapts to different screen sizes, ensuring a seamless user experience.
+5. **Admin Page**- updaing the movies and changing the details and adding the years or seeing the users requests
+
+## Features
+
+### User Features
+- Browse a vast collection of movies.
+- Search for specific movies using keywords.
+- View detailed information, including synopsis, cast, and release year.
+- Responsive design for an optimal experience on all devices.
+
+### Admin Features
+- **Movie Management:** Admins can upload new movies, update details, and categorize them based on collections, years, platforms, and languages.
+- **User Requests:** Admins can view user requests for movies they want to be added and prioritize uploads accordingly.
+- **Download Insights:** Admins can track the number of times a movie has been downloaded or accessed.
+- **Content Updates:** Movies and their metadata can be updated as needed to keep the library fresh and relevant.
+- **User Management:** Admins can monitor and manage users who interact with the platform.
+- **Advanced Filtering:** Sort and filter movies by platform, language, and genre for easy content organization.
+- **Security & Permissions:** Manage access control to prevent unauthorized changes.
+
+## Installation Guide
+
+Follow these steps to set up MoviePub on your local machine:
+
+### Prerequisites
+
+- Java (JDK 11 or higher)
+- Node.js (version 14 or higher) and npm
+- MySQL Database
+
+### Backend Setup
+
+```sh
+# Clone the repository
+git clone https://github.com/naveenSaini1/moviepub.git
+cd moviepub
+
+# Configure database settings in `src/main/resources/application.properties`
+spring.datasource.url=jdbc:mysql://localhost:3306/moviepub
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+
+# Build and run the backend
+./mvnw clean install
+./mvnw spring-boot:run
+```
+
+### Frontend Setup
+
+```sh
+# Navigate to the frontend directory
+cd frontend
+
+# Install dependencies
+npm install
+
+# Start the frontend server
+npm run dev
+```
+
+The application will be available at `http://localhost:3000`.
+
+## Admin Details
+
+The application includes an admin panel for managing movies, users, and reviews.
+
+### Default Admin Credentials
+
+- **Username:** `admin`
+- **Password:** `admin123`
+
+To change the admin credentials, update the database manually or implement a user management system.
+
+## Contributing
+
+```sh
+# Fork the repository
+# Create a new branch
+git checkout -b feature-name
+
+# Make your changes and commit
+git commit -m "Description of changes"
+
+# Push to your fork
+git push origin feature-name
+
+# Open a pull request
+```
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+feel free to cntribute
+
+
+## Screenshots
 ![image](https://github.com/user-attachments/assets/37f3acdc-03bf-499c-819b-16116ce52f78)
 ![image](https://github.com/user-attachments/assets/67756d40-3253-4ba7-92d2-9d9cc6708311)
 ![image](https://github.com/user-attachments/assets/947ea6fd-4b1b-40eb-866c-5f10e4141d19)
