@@ -37,7 +37,7 @@ Follow these steps to set up MoviePub on your local machine:
 
 - Java (JDK 11 or higher)
 - Node.js (version 14 or higher) and npm
-- MySQL Database
+- Postgres Database
 
 ### Backend Setup
 
