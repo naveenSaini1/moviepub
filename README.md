@@ -41,7 +41,11 @@ Follow these steps to set up MoviePub on your local machine:
 
 ### Backend Setup
 
-#### And for fast Deploy use sudo ./deploy.sh
+#### And for fast Deploy use 
+```sh
+sudo ./deploy.sh
+```
+### Manual Installantion 
 
 ```sh
 # Clone the repository
