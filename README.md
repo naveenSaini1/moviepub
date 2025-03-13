@@ -68,6 +68,7 @@ npm install
 # Start the frontend server
 npm run dev
 ```
+and for fast Deploy use sudo ./deploy.sh
 
 The application will be available at `http://localhost:3000`.
 
