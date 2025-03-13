@@ -41,6 +41,8 @@ Follow these steps to set up MoviePub on your local machine:
 
 ### Backend Setup
 
+#### And for fast Deploy use sudo ./deploy.sh
+
 ```sh
 # Clone the repository
 git clone https://github.com/naveenSaini1/moviepub.git
@@ -68,7 +70,7 @@ npm install
 # Start the frontend server
 npm run dev
 ```
-and for fast Deploy use sudo ./deploy.sh
+
 
 The application will be available at `http://localhost:3000`.
 
